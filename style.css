@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=DM+Sans:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,700;1,900&family=Lexend+Deca&family=Merriweather:wght@300;400;700;900&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,500;1,700;1,800&family=Outfit:wght@300;400;600;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(0, 0%, 95%);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  overflow: auto;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+.sedans {
+  position: relative;
+  background-color: hsl(31, 77%, 52%);
+  padding: 30px;
+  max-width: 268px;
+  height: 450px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+h3 {
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 30px;
+  font-family: "Big Shoulders Display", cursive;
+}
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 12px;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+button {
+  position: absolute;
+  display: inline-block;
+  bottom: 42px;
+  padding: 10px;
+  border-radius: 18px;
+  text-align: center;
+  border-style: none;
+  width: 9em;
+  background-color: hsl(0, 0%, 95%);
+  transition: all 0.4s ease-in-out;
+}
+button:hover {
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid white;
+}
+button:active {
+  transform: scale(0.9);
+}
+.sedans button {
+  color: hsl(31, 77%, 52%);
+}
+.sedans button:hover {
+  color: hsl(0, 0%, 95%);
+}
+.suvs button {
+  color: hsl(184, 100%, 22%);
+}
+.suvs button:hover {
+  color: hsl(0, 0%, 95%);
+}
+.luxury button {
+  color: hsl(179, 100%, 13%);
+}
+.luxury button:hover {
+  color: hsl(0, 0%, 95%);
+}
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+  padding: 25px;
+  max-width: 268px;
+  height: 450px;
+  position: relative;
+}
+.luxury {
+  position: relative;
+  background-color: hsl(179, 100%, 13%);
+  padding: 25px;
+  max-width: 268px;
+  height: 450px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+  background: red;
+}
+
+@media only screen and (max-width: 840px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+  }
+  .container {
+    padding: 50px 0px;
+    flex-direction: column;
+    margin: 0.5rem;
+  }
+
+  .attribution {
+    position: relative;
+    width: auto;
+    padding-bottom: 10px;
+  }
+  .sedans {
+    position: relative;
+    width: 258px;
+    height: 350px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+  .suvs {
+    position: relative;
+    max-width: 258px;
+    height: 350px;
+  }
+  .luxury {
+    position: relative;
+    max-width: 258px;
+    height: 350px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+  p {
+    font-size: 10px;
+  }
+  button {
+    position: absolute;
+    display: inline-block;
+    bottom: 42px;
+  }
+}
