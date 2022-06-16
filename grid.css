@@ -13,30 +13,33 @@
   width: 1000px;
   height: 600px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 300px 200px;
-
-  column-gap: 30px;
-  row-gap: 60px;
+  grid-template-areas:
+    /* "a a b c"
+    "d e b c" */
+    "d e b c"
+    "a a b c";
+  /* column-gap: 30px;
+  row-gap: 60px; */
+  padding: 3em;
 }
 
 .el--1 {
   background-color: hsl(0, 65%, 45%);
-  grid-column: 1 / span 2;
+  grid-area: a;
 }
 .el--2 {
   background-color: hsl(115, 80%, 46%);
+  grid-area: b;
 }
 .el--3 {
   background-color: hsl(268, 83%, 44%);
+  grid-area: c;
 }
 .el--4 {
   background-color: hsl(73, 78%, 46%);
-  grid-row: -1 / -2;
+  grid-area: d;
 }
 .el--5 {
   background-color: hsl(192, 85%, 43%);
-}
-.el--6 {
-  background-color: hsl(315, 85%, 43%);
+  grid-area: e;
 }
